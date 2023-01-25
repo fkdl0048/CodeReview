@@ -1,0 +1,15 @@
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.csproj.AssemblyReference.cache
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.AssemblyInfoInputs.cache
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.AssemblyInfo.cs
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.csproj.CoreCompileInputs.cache
+D:\CodeReview\NullObjectPattern\bin\Debug\net7.0\NullObjectPattern.exe
+D:\CodeReview\NullObjectPattern\bin\Debug\net7.0\NullObjectPattern.deps.json
+D:\CodeReview\NullObjectPattern\bin\Debug\net7.0\NullObjectPattern.runtimeconfig.json
+D:\CodeReview\NullObjectPattern\bin\Debug\net7.0\NullObjectPattern.dll
+D:\CodeReview\NullObjectPattern\bin\Debug\net7.0\NullObjectPattern.pdb
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.dll
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\refint\NullObjectPattern.dll
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.pdb
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\NullObjectPattern.genruntimeconfig.cache
+D:\CodeReview\NullObjectPattern\obj\Debug\net7.0\ref\NullObjectPattern.dll
