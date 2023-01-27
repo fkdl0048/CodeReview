@@ -1,0 +1,15 @@
+D:\CodeReview\FactoryMethodPattern\bin\Debug\net7.0\FactoryMethodPattern.exe
+D:\CodeReview\FactoryMethodPattern\bin\Debug\net7.0\FactoryMethodPattern.deps.json
+D:\CodeReview\FactoryMethodPattern\bin\Debug\net7.0\FactoryMethodPattern.runtimeconfig.json
+D:\CodeReview\FactoryMethodPattern\bin\Debug\net7.0\FactoryMethodPattern.dll
+D:\CodeReview\FactoryMethodPattern\bin\Debug\net7.0\FactoryMethodPattern.pdb
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.csproj.AssemblyReference.cache
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.AssemblyInfoInputs.cache
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.AssemblyInfo.cs
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.csproj.CoreCompileInputs.cache
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.dll
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\refint\FactoryMethodPattern.dll
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.pdb
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\FactoryMethodPattern.genruntimeconfig.cache
+D:\CodeReview\FactoryMethodPattern\obj\Debug\net7.0\ref\FactoryMethodPattern.dll
