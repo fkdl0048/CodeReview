@@ -1,0 +1,15 @@
+D:\CodeReview\DependencyInjection\bin\Debug\net7.0\DependencyInjection.exe
+D:\CodeReview\DependencyInjection\bin\Debug\net7.0\DependencyInjection.deps.json
+D:\CodeReview\DependencyInjection\bin\Debug\net7.0\DependencyInjection.runtimeconfig.json
+D:\CodeReview\DependencyInjection\bin\Debug\net7.0\DependencyInjection.dll
+D:\CodeReview\DependencyInjection\bin\Debug\net7.0\DependencyInjection.pdb
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.csproj.AssemblyReference.cache
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.AssemblyInfoInputs.cache
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.AssemblyInfo.cs
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.csproj.CoreCompileInputs.cache
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.dll
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\refint\DependencyInjection.dll
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.pdb
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\DependencyInjection.genruntimeconfig.cache
+D:\CodeReview\DependencyInjection\obj\Debug\net7.0\ref\DependencyInjection.dll
