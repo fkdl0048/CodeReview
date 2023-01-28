@@ -1,0 +1,15 @@
+D:\CodeReview\Recursion\bin\Debug\net7.0\Recursion.exe
+D:\CodeReview\Recursion\bin\Debug\net7.0\Recursion.deps.json
+D:\CodeReview\Recursion\bin\Debug\net7.0\Recursion.runtimeconfig.json
+D:\CodeReview\Recursion\bin\Debug\net7.0\Recursion.dll
+D:\CodeReview\Recursion\bin\Debug\net7.0\Recursion.pdb
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.csproj.AssemblyReference.cache
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.AssemblyInfoInputs.cache
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.AssemblyInfo.cs
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.csproj.CoreCompileInputs.cache
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.dll
+D:\CodeReview\Recursion\obj\Debug\net7.0\refint\Recursion.dll
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.pdb
+D:\CodeReview\Recursion\obj\Debug\net7.0\Recursion.genruntimeconfig.cache
+D:\CodeReview\Recursion\obj\Debug\net7.0\ref\Recursion.dll
