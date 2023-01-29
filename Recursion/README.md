@@ -133,3 +133,75 @@ BackTracking으로 푸는 문제.
 
 backTracking은 상태공간트리의 모든 노드를 탐색할 필요가 없다.  
 
+* return  
+
+간단하게 bool로 참거짓을 반환  
+
+* 인자  
+
+level -> 현재 상태공간트리의 계층을 나타냄  
+
+2차원 배열로 본다면 행을 의미  
+
+전역변수로 지금 위치를 저장 cols[]  
+
+일차원 배열로 체킹함  ex) 1, 3, 5...  
+
+* 검증  
+
+```cs
+if (!Promising(level))
+    return false;
+```
+
+함수 초반에 두어서 함수 콜 스택은 많아 지더라도 가독성이 올라감  
+
+검사해야 하는 내용: 지금까지 저장된 cols에서만 검사하면 됨 즉, 현재 레벨을 인자로 넘겨주고 담겨있는 cols와 같은 열인지, 대각선인지 검사  
+
+*같은 행은 검사할 필요가 없음 앞서 level을 넘겨줄 때 이미 재귀적으로 다음 열로 넘어가기 때문*  
+
+```cs
+private bool Promising(int level)
+{
+    for (int i = 1; i < level; i++) // 담겨있는 level까지만 검사
+    {
+        if (cols[i] == cols[level]) // 행 검사
+        {
+            return false;
+        }
+        else if (level - i == Math.Abs(cols[level] - cols[i])) // 대각선 검사
+        {
+            return false;
+        }
+    }
+
+    return true;        
+}
+```
+
+```cs
+public bool queens(int level)
+{
+    if (!Promising(level))
+        return false;
+    else if (level == _size) // 탈출 조건
+    {
+        for (int i = 1; i < _size; i++)
+        {
+            System.Console.WriteLine($"{i}, {cols[i]} ");
+        }
+        return true;
+    }
+    for (int i = 1; i <= _size; i++) // 현재 사이즈만큼 즉 8인 정사각형의 경우 들어갈 수 있는 숫자 8까지 반복 검증
+    {
+        cols[level + 1] = i; // 다음 행에 값을 넣어주고 재귀 시작
+        if (queens(level + 1)) // 재귀
+        {
+            return true;
+        }
+    }
+    return false;
+}
+```
+
+
