@@ -1,0 +1,15 @@
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.csproj.AssemblyReference.cache
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.AssemblyInfoInputs.cache
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.AssemblyInfo.cs
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.csproj.CoreCompileInputs.cache
+D:\CodeReview\Data_structure\bin\Debug\net7.0\Data_structure.exe
+D:\CodeReview\Data_structure\bin\Debug\net7.0\Data_structure.deps.json
+D:\CodeReview\Data_structure\bin\Debug\net7.0\Data_structure.runtimeconfig.json
+D:\CodeReview\Data_structure\bin\Debug\net7.0\Data_structure.dll
+D:\CodeReview\Data_structure\bin\Debug\net7.0\Data_structure.pdb
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.dll
+D:\CodeReview\Data_structure\obj\Debug\net7.0\refint\Data_structure.dll
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.pdb
+D:\CodeReview\Data_structure\obj\Debug\net7.0\Data_structure.genruntimeconfig.cache
+D:\CodeReview\Data_structure\obj\Debug\net7.0\ref\Data_structure.dll
