@@ -18,10 +18,13 @@
             // cCIAB.PrintCells();
             // System.Console.ReadLine();
 
-            NQueen nQueen = new NQueen(8);
+            // n-queen문제
+            // NQueen nQueen = new NQueen(8);
+            // nQueen.queens(0);
 
-            nQueen.queens(0);
-
+            // 멱집합
+            Powerset powerset = new Powerset();
+            powerset.PrintPowerSet(0);
 
         }
     }
