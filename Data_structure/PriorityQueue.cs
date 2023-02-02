@@ -58,9 +58,6 @@ namespace DataStructure
             return ret;
         }
 
-        public int Count()
-        {
-            return _heap.Count;
-        }
+        public int Count {get {return _heap.Count;}}
     }
 }
