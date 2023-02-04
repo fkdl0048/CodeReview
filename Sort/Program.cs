@@ -25,11 +25,44 @@ namespace Sort
             sort = new InsertionSort();
             int[] insertionArr = sort.Sort(arr, arr.Length);
 
+            sort = new MergeSort();
+            int[] MergeArr = sort.Sort(arr, arr.Length);
 
+
+            System.Console.Write("원본");
+            foreach (var item in arr)
+            {
+                System.Console.Write($"{item}, ");
+            }
+            System.Console.WriteLine();
+
+            System.Console.Write("버블 정렬");
+            foreach (var item in bubbleSortArr)
+            {
+                System.Console.Write($"{item}, ");
+            }
+            System.Console.WriteLine();
+
+            System.Console.Write("선택 정렬");
+            foreach (var item in seletionsortArr)
+            {
+                System.Console.Write($"{item}, ");
+            }
+            System.Console.WriteLine();
+
+            System.Console.Write("삽입 정렬");
             foreach (var item in insertionArr)
             {
-                System.Console.WriteLine(item);
+                System.Console.Write($"{item}, ");
             }
+            System.Console.WriteLine();
+
+            System.Console.Write("합병 정렬");
+            foreach (var item in MergeArr)
+            {
+                System.Console.Write($"{item}, ");
+            }
+            System.Console.WriteLine();
         }
     }
 }

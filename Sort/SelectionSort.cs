@@ -4,22 +4,24 @@ namespace Sort
     {
         public int[] Sort(int[] arr, int n)
         {
-            int[] p = arr;
+            int[] newArr = new int[arr.Length];
+            arr.CopyTo(newArr, 0);
+            
             for (int last = n - 1; last >= 1; last--)
             {
                 int maxIndex = last;
                 for (int k = 0; k < last; k++)
                 {
-                    if (p[k] > p[maxIndex])
+                    if (newArr[k] > newArr[maxIndex])
                     {
                         maxIndex = k;
                     }
                 }
 
-                Program.Swap(ref p[last], ref p[maxIndex]);
+                Program.Swap(ref newArr[last], ref newArr[maxIndex]);
             }
 
-            return p;
+            return newArr;
         }
     }
 }

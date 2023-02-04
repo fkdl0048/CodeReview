@@ -4,19 +4,21 @@ namespace Sort
     {
         public int[] Sort(int[] arr, int n)
         {
-            int[] p = arr;
+            int[] newArr = new int[arr.Length];
+            arr.CopyTo(newArr, 0);
+
             for (int last = n - 1; last >= 1; last--)
             {
                 for (int i = 0; i < last; i++)
                 {
-                    if (p[i] > p[i + 1])
+                    if (newArr[i] > newArr[i + 1])
                     {
-                        Program.Swap(ref p[i], ref p[i + 1]);
+                        Program.Swap(ref newArr[i], ref newArr[i + 1]);
                     }
                 }
             }
 
-            return p;
+            return newArr;
         }
     }
 }
