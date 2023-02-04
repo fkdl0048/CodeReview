@@ -1,0 +1,15 @@
+D:\CodeReview\Sort\bin\Debug\net7.0\Sort.exe
+D:\CodeReview\Sort\bin\Debug\net7.0\Sort.deps.json
+D:\CodeReview\Sort\bin\Debug\net7.0\Sort.runtimeconfig.json
+D:\CodeReview\Sort\bin\Debug\net7.0\Sort.dll
+D:\CodeReview\Sort\bin\Debug\net7.0\Sort.pdb
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.csproj.AssemblyReference.cache
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.AssemblyInfoInputs.cache
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.AssemblyInfo.cs
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.csproj.CoreCompileInputs.cache
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.dll
+D:\CodeReview\Sort\obj\Debug\net7.0\refint\Sort.dll
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.pdb
+D:\CodeReview\Sort\obj\Debug\net7.0\Sort.genruntimeconfig.cache
+D:\CodeReview\Sort\obj\Debug\net7.0\ref\Sort.dll
