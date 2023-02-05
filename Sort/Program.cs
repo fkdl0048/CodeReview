@@ -26,7 +26,10 @@ namespace Sort
             int[] insertionArr = sort.Sort(arr, arr.Length);
 
             sort = new MergeSort();
-            int[] MergeArr = sort.Sort(arr, arr.Length);
+            int[] mergeArr = sort.Sort(arr, arr.Length);
+
+            sort = new QuickSort();
+            int[] quickArr = sort.Sort(arr, arr.Length);
 
 
             System.Console.Write("원본");
@@ -58,7 +61,15 @@ namespace Sort
             System.Console.WriteLine();
 
             System.Console.Write("합병 정렬");
-            foreach (var item in MergeArr)
+            foreach (var item in mergeArr)
+            {
+                System.Console.Write($"{item}, ");
+            }
+            System.Console.WriteLine();
+
+            
+            System.Console.Write("퀵 정렬");
+            foreach (var item in quickArr)
             {
                 System.Console.Write($"{item}, ");
             }
