@@ -1,0 +1,15 @@
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.csproj.AssemblyReference.cache
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.AssemblyInfoInputs.cache
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.AssemblyInfo.cs
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.csproj.CoreCompileInputs.cache
+D:\CodeReview\Thread\bin\Debug\net7.0\Thread.exe
+D:\CodeReview\Thread\bin\Debug\net7.0\Thread.deps.json
+D:\CodeReview\Thread\bin\Debug\net7.0\Thread.runtimeconfig.json
+D:\CodeReview\Thread\bin\Debug\net7.0\Thread.dll
+D:\CodeReview\Thread\bin\Debug\net7.0\Thread.pdb
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.dll
+D:\CodeReview\Thread\obj\Debug\net7.0\refint\Thread.dll
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.pdb
+D:\CodeReview\Thread\obj\Debug\net7.0\Thread.genruntimeconfig.cache
+D:\CodeReview\Thread\obj\Debug\net7.0\ref\Thread.dll
