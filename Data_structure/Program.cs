@@ -21,10 +21,10 @@
             q.Push(new Knight() {ID = 10});
             q.Push(new Knight() {ID = 5});
             
-            while (q.Count() > 0)
-            {
-                System.Console.WriteLine(q.Pop().ID);
-            }
+            // while (q.Count() > 0)
+            // {
+            //     System.Console.WriteLine(q.Pop().ID);
+            // }
         }
     }
 }

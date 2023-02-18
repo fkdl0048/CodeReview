@@ -1,0 +1,15 @@
+D:\CodeReview\ObserverPattern\bin\Debug\net7.0\ObserverPattern.exe
+D:\CodeReview\ObserverPattern\bin\Debug\net7.0\ObserverPattern.deps.json
+D:\CodeReview\ObserverPattern\bin\Debug\net7.0\ObserverPattern.runtimeconfig.json
+D:\CodeReview\ObserverPattern\bin\Debug\net7.0\ObserverPattern.dll
+D:\CodeReview\ObserverPattern\bin\Debug\net7.0\ObserverPattern.pdb
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.csproj.AssemblyReference.cache
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.AssemblyInfoInputs.cache
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.AssemblyInfo.cs
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.csproj.CoreCompileInputs.cache
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.dll
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\refint\ObserverPattern.dll
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.pdb
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ObserverPattern.genruntimeconfig.cache
+D:\CodeReview\ObserverPattern\obj\Debug\net7.0\ref\ObserverPattern.dll
