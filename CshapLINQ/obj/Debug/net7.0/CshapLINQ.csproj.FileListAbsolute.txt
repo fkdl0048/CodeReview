@@ -1,0 +1,15 @@
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.csproj.AssemblyReference.cache
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.AssemblyInfoInputs.cache
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.AssemblyInfo.cs
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.csproj.CoreCompileInputs.cache
+D:\CodeReview\CshapLINQ\bin\Debug\net7.0\CshapLINQ.exe
+D:\CodeReview\CshapLINQ\bin\Debug\net7.0\CshapLINQ.deps.json
+D:\CodeReview\CshapLINQ\bin\Debug\net7.0\CshapLINQ.runtimeconfig.json
+D:\CodeReview\CshapLINQ\bin\Debug\net7.0\CshapLINQ.dll
+D:\CodeReview\CshapLINQ\bin\Debug\net7.0\CshapLINQ.pdb
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.dll
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\refint\CshapLINQ.dll
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.pdb
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\CshapLINQ.genruntimeconfig.cache
+D:\CodeReview\CshapLINQ\obj\Debug\net7.0\ref\CshapLINQ.dll
