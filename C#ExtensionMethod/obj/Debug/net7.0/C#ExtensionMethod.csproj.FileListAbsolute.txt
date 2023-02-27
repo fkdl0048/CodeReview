@@ -1,0 +1,15 @@
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.csproj.AssemblyReference.cache
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.AssemblyInfoInputs.cache
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.AssemblyInfo.cs
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.csproj.CoreCompileInputs.cache
+D:\CodeReview\C#ExtensionMethod\bin\Debug\net7.0\C#ExtensionMethod.exe
+D:\CodeReview\C#ExtensionMethod\bin\Debug\net7.0\C#ExtensionMethod.deps.json
+D:\CodeReview\C#ExtensionMethod\bin\Debug\net7.0\C#ExtensionMethod.runtimeconfig.json
+D:\CodeReview\C#ExtensionMethod\bin\Debug\net7.0\C#ExtensionMethod.dll
+D:\CodeReview\C#ExtensionMethod\bin\Debug\net7.0\C#ExtensionMethod.pdb
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.dll
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\refint\C#ExtensionMethod.dll
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.pdb
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\C#ExtensionMethod.genruntimeconfig.cache
+D:\CodeReview\C#ExtensionMethod\obj\Debug\net7.0\ref\C#ExtensionMethod.dll

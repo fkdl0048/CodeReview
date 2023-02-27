@@ -8,7 +8,7 @@
 
             // 2. Query creation.
             // numQuery is an IEnumerable<int>
-            var numQuery =
+            IEnumerable<int> numQuery =
                 from num in numbers
                 where (num % 2) == 0
                 select num;
@@ -18,7 +18,6 @@
             {
                 Console.Write("{0,1} ", num);
             }
-            IQueryable<int> a;
         }
     }
 
