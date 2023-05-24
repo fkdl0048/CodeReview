@@ -1,0 +1,15 @@
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\bin\Debug\net7.0\C#CallBackFuncAndDelegate.exe
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\bin\Debug\net7.0\C#CallBackFuncAndDelegate.deps.json
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\bin\Debug\net7.0\C#CallBackFuncAndDelegate.runtimeconfig.json
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\bin\Debug\net7.0\C#CallBackFuncAndDelegate.dll
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\bin\Debug\net7.0\C#CallBackFuncAndDelegate.pdb
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.csproj.AssemblyReference.cache
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.AssemblyInfoInputs.cache
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.AssemblyInfo.cs
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.csproj.CoreCompileInputs.cache
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.dll
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\refint\C#CallBackFuncAndDelegate.dll
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.pdb
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\C#CallBackFuncAndDelegate.genruntimeconfig.cache
+D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\obj\Debug\net7.0\ref\C#CallBackFuncAndDelegate.dll

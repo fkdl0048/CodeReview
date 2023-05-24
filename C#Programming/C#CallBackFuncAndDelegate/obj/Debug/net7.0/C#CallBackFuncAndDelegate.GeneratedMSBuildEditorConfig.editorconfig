@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = CshapLINQ
-build_property.ProjectDir = d:\CodeReview\C#Programming\CshapLINQ\
+build_property.RootNamespace = C_CallBackFuncAndDelegate
+build_property.ProjectDir = D:\CodeReview\C#Programming\C#CallBackFuncAndDelegate\
