@@ -1,0 +1,15 @@
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\bin\Debug\net7.0\SOLID.exe
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\bin\Debug\net7.0\SOLID.deps.json
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\bin\Debug\net7.0\SOLID.runtimeconfig.json
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\bin\Debug\net7.0\SOLID.dll
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\bin\Debug\net7.0\SOLID.pdb
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.csproj.AssemblyReference.cache
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.AssemblyInfoInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.AssemblyInfo.cs
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.csproj.CoreCompileInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.dll
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\refint\SOLID.dll
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.pdb
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\SOLID.genruntimeconfig.cache
+C:\Users\fkdl0\Documents\CodeReview\Structure\SOLID\obj\Debug\net7.0\ref\SOLID.dll
