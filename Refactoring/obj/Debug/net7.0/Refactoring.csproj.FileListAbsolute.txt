@@ -1,0 +1,15 @@
+D:\CodeReview\Refactoring\bin\Debug\net7.0\Refactoring.exe
+D:\CodeReview\Refactoring\bin\Debug\net7.0\Refactoring.deps.json
+D:\CodeReview\Refactoring\bin\Debug\net7.0\Refactoring.runtimeconfig.json
+D:\CodeReview\Refactoring\bin\Debug\net7.0\Refactoring.dll
+D:\CodeReview\Refactoring\bin\Debug\net7.0\Refactoring.pdb
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.csproj.AssemblyReference.cache
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.AssemblyInfoInputs.cache
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.AssemblyInfo.cs
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.csproj.CoreCompileInputs.cache
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.dll
+D:\CodeReview\Refactoring\obj\Debug\net7.0\refint\Refactoring.dll
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.pdb
+D:\CodeReview\Refactoring\obj\Debug\net7.0\Refactoring.genruntimeconfig.cache
+D:\CodeReview\Refactoring\obj\Debug\net7.0\ref\Refactoring.dll
