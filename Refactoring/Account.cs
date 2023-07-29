@@ -9,30 +9,11 @@ public class Account
         foreach (var perf in invoice.performances)
         {
             var play = plays.FirstOrDefault(p => p.name == perf.playID);
-            int thisAmount = 0;
-
-            switch (play.type)
+            if (play == null)
             {
-                case "tragedy":
-                    thisAmount = 40000;
-                    if (perf.audience > 30)
-                    {
-                        thisAmount += 1000 * (perf.audience - 30);
-                    }
-
-                    break;
-                case "comedy":
-                    thisAmount = 30000;
-                    if (perf.audience > 20)
-                    {
-                        thisAmount += 10000 + 500 * (perf.audience - 20);
-                    }
-
-                    thisAmount += 300 * perf.audience;
-                    break;
-                default:
-                    throw new Exception($"알 수 없는 장르:{play.type}");
+                throw new Exception($"연극이름:{perf.playID}를 찾을 수 없습니다.");
             }
+            int thisAmount = AmountFor(perf, play);
 
             // 포인트를 적립한다.
             volumeCredits += Math.Max(perf.audience - 30, 0);
@@ -48,5 +29,35 @@ public class Account
         result += $"적립 포인트: {volumeCredits}점\n";
 
         return result;
+    }
+
+    private int AmountFor(Performance perf, Play play)
+    {
+        int thisAmount = 0;
+
+        switch (play.type)
+        {
+            case "tragedy": // 비극
+                thisAmount = 40000;
+                if (perf.audience > 30)
+                {
+                    thisAmount += 1000 * (perf.audience - 30);
+                }
+
+                break;
+            case "comedy":
+                thisAmount = 30000;
+                if (perf.audience > 20)
+                {
+                    thisAmount += 10000 + 500 * (perf.audience - 20);
+                }
+
+                thisAmount += 300 * perf.audience;
+                break;
+            default:
+                throw new Exception($"알 수 없는 장르:{play.type}");
+        }
+
+        return thisAmount;
     }
 }
