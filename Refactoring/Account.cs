@@ -10,9 +10,15 @@ public class Account
     }
     public String Statment()
     {
-        string result = $"청구 내역 (고객명:{invoice.customer})\n";
+        Invoice statementData = new Invoice(invoice.customer , invoice.performances);
+        return renderPlainText(statementData);
+    }
 
-        foreach (var perf in invoice.performances)
+    private string renderPlainText(Invoice statementData)
+    {
+        string result = $"청구 내역 (고객명:{statementData.customer})\n";
+
+        foreach (var perf in statementData.performances)
         {
             // 청구 내역을 출력한다.
             result += $"{Playfor(perf).name}: ${USD(AmountFor(perf) / 100)} ({perf.audience}석)\n";
@@ -55,7 +61,8 @@ public class Account
     }
 
     private Play Playfor(Performance aPerformance)
-    {   
+    {
+        // 메서드 내부 메서드 불가능하기 때문에 클래스 멤버로 처리
         return plays.FirstOrDefault(p => p.name == aPerformance.playID) ?? throw new Exception($"연극이름:{aPerformance.playID}를 찾을 수 없습니다.");
     }
 

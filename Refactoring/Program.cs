@@ -16,7 +16,13 @@
 
         Invoice invoices = new Invoice("BigCo", performances);
 
-        Account account = new Account(plays, invoices);
-        Console.WriteLine(account.Statment());
+        // Account account = new Account(plays, invoices);
+        // Console.WriteLine(account.Statment());
+
+        StatementPrinter statementPrinter = new StatementPrinter(new TextStatement(invoices, plays));
+        statementPrinter.Print();
+
+        statementPrinter = new StatementPrinter(new HtmlStatement(invoices, plays));
+        statementPrinter.Print();
     }
 }
