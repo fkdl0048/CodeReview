@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CodeReview\\Refactoring\\Refactoring.csproj": {}
+    "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj": {}
   },
   "projects": {
-    "D:\\CodeReview\\Refactoring\\Refactoring.csproj": {
+    "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CodeReview\\Refactoring\\Refactoring.csproj",
+        "projectUniqueName": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj",
         "projectName": "Refactoring",
-        "projectPath": "D:\\CodeReview\\Refactoring\\Refactoring.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\CodeReview\\Refactoring\\obj\\",
+        "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj",
+        "packagesPath": "C:\\Users\\fkdl0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\fkdl0\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

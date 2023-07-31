@@ -16,7 +16,7 @@
 
         Invoice invoices = new Invoice("BigCo", performances);
 
-        Account account = new Account();
-        Console.WriteLine(account.Statment(invoices, plays));
+        Account account = new Account(plays, invoices);
+        Console.WriteLine(account.Statment());
     }
 }
