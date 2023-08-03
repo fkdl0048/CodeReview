@@ -1,0 +1,15 @@
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\bin\Debug\net7.0\DecoratorPattern.exe
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\bin\Debug\net7.0\DecoratorPattern.deps.json
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\bin\Debug\net7.0\DecoratorPattern.runtimeconfig.json
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\bin\Debug\net7.0\DecoratorPattern.dll
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\bin\Debug\net7.0\DecoratorPattern.pdb
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.csproj.AssemblyReference.cache
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.AssemblyInfoInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.AssemblyInfo.cs
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.csproj.CoreCompileInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.dll
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\refint\DecoratorPattern.dll
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.pdb
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\DecoratorPattern.genruntimeconfig.cache
+C:\Users\fkdl0\Documents\CodeReview\ProgrammingPatterns\DecoratorPattern\obj\Debug\net7.0\ref\DecoratorPattern.dll
