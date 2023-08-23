@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj",
+      "projectUniqueName": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter01\\Refactoring.csproj",
       "projectName": "Refactoring",
-      "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Refactoring.csproj",
+      "projectPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter01\\Refactoring.csproj",
       "packagesPath": "C:\\Users\\fkdl0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\obj\\",
+      "outputPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fkdl0\\AppData\\Roaming\\NuGet\\NuGet.Config"
