@@ -1,0 +1,17 @@
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\Chapter04.exe
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\Chapter04.deps.json
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\Chapter04.runtimeconfig.json
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\Chapter04.dll
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\Chapter04.pdb
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.csproj.AssemblyReference.cache
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.AssemblyInfoInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.AssemblyInfo.cs
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.csproj.CoreCompileInputs.cache
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.dll
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\refint\Chapter04.dll
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.pdb
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.genruntimeconfig.cache
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\ref\Chapter04.dll
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\bin\Debug\net7.0-windows\nunit.framework.dll
+C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\obj\Debug\net7.0-windows\Chapter04.csproj.CopyComplete
