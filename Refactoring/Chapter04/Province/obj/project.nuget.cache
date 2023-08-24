@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DP2d6ePXjLQqsMR9u3/aAZ59ZixofCP72spjv4v2Ml0ftU73okddlOFZ6Kz/bqgUT4dPvZ8jsymE8A0QFtbAxw==",
+  "dgSpecHash": "xOi0wynpwHUIM4OiYJAZ9xzvwZN+G/IHFPHK2/VgLwAJKl0iraNhbYNFeMmv0Ia8DQa2Q6EWRzSN6OOHpPmtZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
+  "projectFilePath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fkdl0\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\fkdl0\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",

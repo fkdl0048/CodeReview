@@ -3986,11 +3986,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\Province_Test.csproj",
+      "projectUniqueName": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\Province_Test.csproj",
       "projectName": "Province_Test",
-      "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\Province_Test.csproj",
+      "projectPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\Province_Test.csproj",
       "packagesPath": "C:\\Users\\fkdl0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\obj\\",
+      "outputPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fkdl0\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4005,8 +4005,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {
-              "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj"
+            "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {
+              "projectPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj"
             }
           }
         }

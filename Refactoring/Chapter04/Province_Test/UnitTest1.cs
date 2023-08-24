@@ -1,5 +1,6 @@
 namespace Province_Test;
 
+[TestFixture]
 public class Tests
 {
     private Province asia;
@@ -14,5 +15,11 @@ public class Tests
     public void Shortfall()
     {
         Assert.AreEqual(5, asia.Shortfall());
+    }
+
+    [Test]
+    public void Profit()
+    {
+        Assert.AreEqual(230, asia.Profit());
     }
 }

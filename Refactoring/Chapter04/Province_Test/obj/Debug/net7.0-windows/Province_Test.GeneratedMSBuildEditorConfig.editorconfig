@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Province_Test
-build_property.ProjectDir = C:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\Province_Test\
+build_property.ProjectDir = c:\Users\fkdl0\Documents\CodeReview\Refactoring\Chapter04\Province_Test\

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {}
+    "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {
+    "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
+        "projectUniqueName": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
         "projectName": "Chapter04",
-        "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
+        "projectPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\Chapter04.csproj",
         "packagesPath": "C:\\Users\\fkdl0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\obj\\",
+        "outputPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\Refactoring\\Chapter04\\Province\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fkdl0\\AppData\\Roaming\\NuGet\\NuGet.Config"
