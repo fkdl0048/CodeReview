@@ -1,0 +1,15 @@
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.csproj.AssemblyReference.cache
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.AssemblyInfoInputs.cache
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.AssemblyInfo.cs
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.csproj.CoreCompileInputs.cache
+D:\CodeReview\C#Programming\C#VirtualTest\bin\Debug\net7.0\C#VirtualTest.exe
+D:\CodeReview\C#Programming\C#VirtualTest\bin\Debug\net7.0\C#VirtualTest.deps.json
+D:\CodeReview\C#Programming\C#VirtualTest\bin\Debug\net7.0\C#VirtualTest.runtimeconfig.json
+D:\CodeReview\C#Programming\C#VirtualTest\bin\Debug\net7.0\C#VirtualTest.dll
+D:\CodeReview\C#Programming\C#VirtualTest\bin\Debug\net7.0\C#VirtualTest.pdb
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.dll
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\refint\C#VirtualTest.dll
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.pdb
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\C#VirtualTest.genruntimeconfig.cache
+D:\CodeReview\C#Programming\C#VirtualTest\obj\Debug\net7.0\ref\C#VirtualTest.dll
