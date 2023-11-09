@@ -144,3 +144,7 @@ LocalizationSettings.StringDatabase.GetLocalizedString("Table", "Key", "current 
 table자체를 성격에 따라 분리하여 csv로 관리하면 매우 편할 듯 하다.
 
 나중에 대화 시스템을 만들게 된다면 다른 패키지와의 결합이 가장 문제일 듯
+
+### 실제 적용
+
+[적용하고 있는 프로젝트](https://github.com/GG-Studio-990001/GameOver)

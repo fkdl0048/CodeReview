@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj": {}
+    "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj": {
+    "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
+        "projectUniqueName": "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
         "projectName": "DecoratorPattern",
-        "projectPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
+        "projectPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
         "packagesPath": "C:\\Users\\fkdl0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\obj\\",
+        "outputPath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fkdl0\\AppData\\Roaming\\NuGet\\NuGet.Config"

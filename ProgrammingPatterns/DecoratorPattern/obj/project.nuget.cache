@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mU2ZZTx8rZB9rvyGBX3p4ry4U8ilk7scFf8osDOJ79kBqAqEo5SFaQvX36B2p6lbmc6s83kH12ixIJbM3ywQ6Q==",
+  "dgSpecHash": "8Ar/oD0mBx3uLmYEyikXcfiuH9Z87CGQJIvR8f6XbhYBkzxBUXymBTexNYJkhiBS0jKwWTh3zuT16pZ8BjHASg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
+  "projectFilePath": "c:\\Users\\fkdl0\\Documents\\CodeReview\\ProgrammingPatterns\\DecoratorPattern\\DecoratorPattern.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
