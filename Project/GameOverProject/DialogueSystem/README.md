@@ -22,11 +22,6 @@
 - 대화문은 쉽게 편집가능해야 하고 쉽게 읽을 수 있어야 함 (기획입장에서)
 - 프레임에 들어갈 정보는 이름, 대화문, 토글, +a가 있어야 함 (수정 가능해야함)
 
-### yarnSpinner
-
-- StartDialogue로 해당 노드, 즉 대화 정보를 읽어와서 시작
-- 해당 대화정보는 해당 NPC, 상황을 가지고 있어야 함
-
 ### 구조
 
 현재 구조에서 좀 더 유연한 구조를 위해 yarnSpinner를 사용할 것이다.
@@ -36,3 +31,28 @@
 - 해당 정보 즉, 대화 진행에 필요한 정보(NPC 정보, 이름, 상태 등등)를 가지고 있는 DialogueData
 - 해당 정보를 가지고 yarnSpinner를 통해 대화를 진행하는 DialogueRunner
 - 대화 창을 관리하는 DialogueUI
+
+## yarnSpinner
+
+구조 설명
+
+시작하기 위해선 "GameObject > YarnSpinner > Dialogue Runner"를 추가해야 한다.
+
+- [구문 설명](https://docs.yarnspinner.dev/beginners-guide/syntax-basics) 
+  - 기획용
+- [테스트 용](https://try.yarnspinner.dev/)
+  - 직접 넣어서 테스트 가능
+- [사용 가이드](https://docs.yarnspinner.dev/beginners-guide/making-a-game/yarn-spinner-for-unity)
+
+### DialogueRunner
+
+대화를 진행하는 클래스로 가장 부모 격이다.
+
+앞서 말한 생성된 프리팹에 부착되어 있다.
+
+가장 최종의 관리자로 DialogueView를 통해 대화를 진행한다. (모든 대화는 이 클래스를 토대로 진행된다.)
+
+### DialogueView
+
+DialogueRunner를 통해 대화를 진행하는 클래스로 대화를 진행하는 클래스를 상속받아 구현한다.
+
