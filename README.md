@@ -2,16 +2,14 @@
 
 공부와 프로젝트 작업 중 기록하고 싶은 내용, 구체화하고 싶은 코드를 리뷰하는 레포입니다.
 
-필요에 맞게 Issue로 발행되어 각 라벨로 구분됩니다.
-
-## 다루는 내용들
-
-- 프로젝트에서 개발된 유용했던 코드
-- 기본적인 프로그래밍 지식(데이터 구조, 알고리즘 등)
-- 사용했던 라이브러리, 프레임 워크에 관련된 내용
-- 프로그래밍 디자인 패턴, 아키텍처
-- 그 외
-
 ## Index
 
-- [Algorithm](../Algorithm/README.md)
+- [Algorithm](Algorithms/README.md)
+- [Architecture](Architecture/README.md)
+- [Book](Book/README.md)
+- [DataStructure](DataStructure/README.md)
+- [GameEngine](GameEngine/README.md)
+- [Language](Language/README.md)
+- [ProgrammingPattern](ProgrammingPatterns/README.md)
+- [Project](Project/README.md)
+- [Test](Test/README.md)
