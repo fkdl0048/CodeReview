@@ -5,4 +5,4 @@
 - [객체지향 사고 프로세스](https://github.com/fkdl0048/BookReview/issues/36)
 - [객체지향의 사실과 오해](https://github.com/fkdl0048/BookReview/issues/40)
 - [오브젝트](https://github.com/fkdl0048/BookReview/issues/209)
-- [UNSEEN 온라인 테스트용](./UNSEEN/README.md)
+- [UNSEEN 온라인 테스트용 (개인적인 생각)](./UNSEEN/README.md)
