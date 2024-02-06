@@ -4,10 +4,11 @@
 
 ## Index
 
-- [Algorithm](Algorithms/README.md)
+- [Algorithm](Algorithm/README.md)
 - [Architecture](Architecture/README.md)
 - [Book](Book/README.md)
 - [DataStructure](DataStructure/README.md)
+- [GameAlgorithm](GameAlgorithm/README.md)
 - [GameEngine](GameEngine/README.md)
 - [Language](Language/README.md)
 - [OOP](OOP/README.md)
