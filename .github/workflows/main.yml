@@ -1,0 +1,22 @@
+name: issue_Action
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          gh issue edit $ISSUE_URL --add-assignee "fkdl0048"
+      - env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          gh issue edit $ISSUE_URL --add-project "Todo"
+          
