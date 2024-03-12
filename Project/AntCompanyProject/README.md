@@ -53,3 +53,10 @@ Canvas를 프리팹하여 하나의 PopUp으로 관리 Canvas는 해당 환경�
 
 ## 코드 분석
 
+### text load
+
+Xml로 전부 변환 후 GameManager에서 지역으로 데이터를 불러와서 Text에 할당(바인딩 된)
+
+### Save Load
+
+Json 저장 확인하기
