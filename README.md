@@ -8,6 +8,7 @@
 - [Architecture](Architecture/README.md)
 - [Book](Book/README.md)
 - [DataStructure](DataStructure/README.md)
+- [DevelopmentMethodology](DevelopmentMethodology/README.md)
 - [GameAlgorithm](GameAlgorithm/README.md)
 - [GameEngine](GameEngine/README.md)
 - [Language](Language/README.md)
