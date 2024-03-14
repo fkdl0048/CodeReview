@@ -6,4 +6,5 @@
 
 - [UNSEEN 레포](https://github.com/futurelabunseen/B-JeonganLee)
 - [Unreal Engine5 Convention](./UnrealEngine5Convention.md)
+- [Unreal Terminology](./UnrealTerminology.md)
 - [Unreal GAS](./UnrealGAS/README.md)
