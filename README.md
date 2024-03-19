@@ -10,6 +10,7 @@
 - [DataStructure](DataStructure/README.md)
 - [DevelopmentMethodology](DevelopmentMethodology/README.md)
 - [GameAlgorithm](GameAlgorithm/README.md)
+- [GameDesign](GameDesign/README.md)
 - [GameEngine](GameEngine/README.md)
 - [Language](Language/README.md)
 - [OOP](OOP/README.md)
