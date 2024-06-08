@@ -7,6 +7,7 @@
 - [Algorithm](Algorithm/README.md)
 - [Architecture](Architecture/README.md)
 - [Book](Book/README.md)
+- [ComputerScience](ComputerScience/README.md)
 - [DataStructure](DataStructure/README.md)
 - [DevelopmentMethodology](DevelopmentMethodology/README.md)
 - [GameAlgorithm](GameAlgorithm/README.md)
@@ -19,5 +20,4 @@
 - [ProgrammingPattern](ProgrammingPatterns/README.md)
 - [Project](Project/README.md)
 - [Refactoring](Refactoring/)
-- [SystemProgramming](/SystemProgramming/README.md)
 - [Test](Test/README.md)
