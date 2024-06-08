@@ -564,6 +564,38 @@ int main()
 
 `C#`의 `List`와 동일하다. (동적 배열)
 
+#### 벡터의 특징
+
+벡터는 **Dynamic Size Array**로 불리며, 배열과 유사하지만 크기를 동적으로 조절한다. 또한 **Sequential Container**로 분류되며, 데이터를 순차적으로 저장한다.
+
+물론 포인터를 사용하여 동적 배열을 구현할 수 있지만, **벡터는 메모리 관리를 자동으로 처리**하므로 편리하다.
+
+- delete를 사용하지 않아도 힙영역의 메모리를 해제한다.
+- 생성시 초기화를 할 수 있다.
+- 순회를 할 때는 for-each문을 사용할 수 있고, 가장 안전하다.
+  - `for (const int & i : v) { ... }`
+  - 실제 어셈블리는 for을 통해 `begin()`과 `end()`를 사용하여 순회한다.
+
+#### Time Complexity
+
+- Random Access: O(1)
+  - 이는 연속적인 메모리 공간에 데이터를 저장하기 때문에 가능하다.
+- Insertion or Deletion at the end: O(1)
+  - 마찬가지로 연속적인 메모리 공간에 데이터를 저장하기 때문에 가능하다.
+- Insertion or Deletion at the beginning or in the middle: O(n)
+  - 배열 크기만큼의 Move 연산이 필요하기 때문에 O(n)이다.
+
+#### Advanced
+
+- `emplace_back()`: 객체를 생성하여 벡터에 추가한다.
+  - push_back()과 비슷하지만, 객체를 생성하는데 필요한 인수를 직접 전달할 수 있다.
+    - 또한 불필요한 복사가 발생하지 않는다.
+- vector 변수의 크기는 24바이트이다.
+  - 8바이트는 실제 오브젝트 포인터, 8바이트는 capacity에 대한 정보, 8바이트는 size에 대한 정보
+- 
+
+#### vector::vector
+
 ```c++
 template <class Type, class Allocator = allocator<Type>>
 class vector

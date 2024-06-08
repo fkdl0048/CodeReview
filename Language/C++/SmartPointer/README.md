@@ -136,6 +136,43 @@ int main()
 
 C++은 벡터에 담긴 포인터도 같은 방식으로 해제된다. (벡터가 소멸될 때 벡터에 담긴 포인터도 해제된다.)
 
+### 클래스 내부에서 스마트 포인터 사용하기
+
+만약 클래스 내부에 Unique Pointer를 사용하고 해당 객체를 copy한다면 에러가 발생한다. (Unique Pointer는 복사가 불가능하다.)
+
+```cpp
+#include <memory>
+
+class Test
+{
+public:
+    Test() : mValue{std::make_unique<int>(10)} {};
+
+    void Print()
+    {
+        std::cout << *mValue << std::endl;
+    }
+
+private:
+    std::unique_ptr<int> mValue;
+};
+
+int main()
+{
+    Test t1;
+    t1.Print();
+
+    Test t2 = t1; // error
+
+    return 0;
+}
+```
+
+이는 컴파일러가 자동적으로 복사 생성자를 제한하기 때문이다. (Unique Pointer는 복사가 불가능하다.) 만약 Uniptr의 구조를 유지하되 복사하고 싶다면 사용자 정의로 생성해야 한다.
+
+shared_ptr을 내부에 가지고 있다면 따로 컴파일러가 막아주지 않는다. (shared_ptr은 복사가 가능하다.) 하지만 이는 순환 참조 문제가 발생할 수 있다. 하지만 이런 상황이 필요할 수 있기 때문에 주석으로 경고를 해주거나 clone 함수를 만들어서 사용할 수 있다.
+
+
 ## 참고
 
 - [C++ Smart Pointer](https://www.youtube.com/watch?v=SQYPN8FVCAI)
