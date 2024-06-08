@@ -24,6 +24,7 @@
 - [그래픽스 개념 정리(OpenGL)](https://github.com/fkdl0048/Computer_Graphics/blob/main/Integration/LectrureNote.md)
 - [Ray Tracing](./RayTracing/README.md)
 - [Rendering Pipeline](./RenderingPipeline/README.md)
+- [Matrix](./Matrix/README.md)
 - Filed of View
 - Shader
 - Inverse Kinematics
