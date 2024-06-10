@@ -128,6 +128,7 @@ void bfs(int start){
             if (!visited[next]){
                 q.push(next);
                 visited[next] = true;
+                t
             }
         }
     }
