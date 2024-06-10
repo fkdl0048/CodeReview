@@ -8,116 +8,6 @@
 
 c++문법도 같이 학습해서 내용이 조금 깊은 부분도 있지만, 아마도 각 컨테이너의 장단점, 비교부분이 제일 중요할 것이다.
 
-### 기본 배열
-
-*실제 컨테이너 구현은 이 기본 배열로 이뤄져 있기 때문에 이해하고 넘어간다.*
-
-실제 [공식문서](https://learn.microsoft.com/ko-kr/cpp/cpp/arrays-cpp?view=msvc-170)를 참고하는 게 좋다.
-
-기존 C스타일 대신 C++의 스타일을 사용하는 것이 좋다고 한다.
-
-값을 지정하지 않으면 기본 0이 할당된다.
-
-#### 스택선언
-
-스택 선언은 다음과 같다.
-
-```c++
-constexpr size_t size = 1000;
-
-    // Declare an array of doubles to be allocated on the stack
-    double numbers[size] {0};
-
-    // Assign a new value to the first element
-    numbers[0] = 1;
-
-    // Assign a value to each subsequent element
-    // (numbers[1] is the second element in the array.)
-    for (size_t i = 1; i < size; i++)
-    {
-        numbers[i] = numbers[i-1] * 1.1;
-    }
-
-    // Access each element
-    for (size_t i = 0; i < size; i++)
-    {
-        std::cout << numbers[i] << " ";
-    }
-  ```
-
-스택 기반 배열은 힙 기반 배열보다 더 빠르게 할당하고 액세스할 수 있습니다
-
-#### 힙선언
-
-힙선언은 다음과 같다.
-
-```c++
-void do_something(size_t size)
-{
-    // Declare an array of doubles to be allocated on the heap
-    double* numbers = new double[size]{ 0 };
-
-    // Assign a new value to the first element
-    numbers[0] = 1;
-
-    // Assign a value to each subsequent element
-    // (numbers[1] is the second element in the array.)
-    for (size_t i = 1; i < size; i++)
-    {
-        numbers[i] = numbers[i - 1] * 1.1;
-    }
-
-    // Access each element with subscript operator
-    for (size_t i = 0; i < size; i++)
-    {
-        std::cout << numbers[i] << " ";
-    }
-
-    // Access each element with pointer arithmetic
-    // Use a copy of the pointer for iterating
-    double* p = numbers;
-
-    for (size_t i = 0; i < size; i++)
-    {
-        // Dereference the pointer, then increment it
-        std::cout << *p++ << " ";
-    }
-
-    // Alternate method:
-    // Reset p to numbers[0]:
-    p = numbers;
-
-    // Use address of pointer to compute bounds.
-    // The compiler computes size as the number
-    // of elements * (bytes per element).
-    while (p < (numbers + size))
-    {
-        // Dereference the pointer, then increment it
-        std::cout << *p++ << " ";
-    }
-
-    delete[] numbers; // don't forget to do this!
-
-}
-int main()
-{
-    do_something(108);
-}
-```
-
-스택에 할당하기에는 너무 크거나 컴파일 시간에 크기를 알 수 없는 배열이 필요할 수 있습니다.
-
-연산자는 첫 번째 요소에 대한 포인터를 반환합니다. (포인터로 배열접근, *p++)
-
-제대로 사용하려면 다음을 보장해야 한다. (사용자가)
-
-- 항상 원래 포인터 주소의 복사본을 유지하므로 배열이 더 이상 필요하지 않을 때 메모리를 삭제할 수 있습니다.
-- 배열 범위를 지나 포인터 주소를 증가하거나 감소하지 않습니다.
-
-코드를 보면 배열로 순회하는 법, 포인터로 사이즈만큼 반복하여 순회하는 법, 포인터로 실제 메모리 크기만큼 반복하는 법을 알 수 있다.
-
-규칙에 나와 있듯이 3가지 방법다 배열의 범위를 지날 수 없는 기저사례들로 반복하고, 원본 포인터를 유지하여 마지막에 delete[]로 메모리를 해제해야 한다.
-
 #### 배열 초기화
 
 다음 두 내용은 동일하다.
@@ -242,6 +132,13 @@ array<int, 4> ai = { 1, 2, 3 };
   - 네임스페이스: `std`
 
 `C#`의 Array와 동일하다.
+
+#### 특징
+
+- Vector는 힙에 할당되지만, Array는 스택에 할당된다.
+- 즉, 어레이는 컴파일 시간에 스택 프레임안에 할당되어 빠르게 접근할 수 있다.
+- 또한 컴파일 타임에 스택프레임에 맞는 공간이 할당되어야 하기 때문에 fixed size를 가진다.
+- vector와 마찬가지로 Random Access가 가능하다. 또한 연속적인 메모리 공간에 할당
 
 #### array::array
 
@@ -592,263 +489,221 @@ int main()
     - 또한 불필요한 복사가 발생하지 않는다.
 - vector 변수의 크기는 24바이트이다.
   - 8바이트는 실제 오브젝트 포인터, 8바이트는 capacity에 대한 정보, 8바이트는 size에 대한 정보
-- 
+- `reserve`: 벡터의 용량을 미리 할당한다.
+  - 벡터의 크기를 미리 할당하여 재할당을 줄일 수 있다.
+  - 즉, 예측이 가능하다면 미리할당하여 재할당의 비용을 줄일 수 있다.
+  - but, 너무 크게 할당하면 메모리 낭비가 발생할 수 있다.
+- 항상 뒤에 추가가 N(1)의 시간복잡도를 가지는 것은 아니다. Capacity가 꽉 찼을 때, 새로운 메모리를 할당하고 기존 데이터를 복사해야 하기 때문에 N이 된다. 또는 Move (뒤에 할당이 불가능하다면)
+- 새로운 오브젝트를 벡터에 할당할 때, 실제 3 of rule, 5 of rule에 따라 copy constructor, move constructor 등으로 호출이 될텐데, 이때 해당 생성자, 소멸자가 예외를 던질 수 있다고 해석하기 때문에 `noexcept`를 사용한다. (따라서 필수적인 요소, or reserve를 사용하여 copy나 재할당을 최소화하는 전략)
 
-#### vector::vector
+#### forloop
 
-```c++
-template <class Type, class Allocator = allocator<Type>>
-class vector
-```
+c++에서 벡터를 forloop할 때는 다음과 같은 방법이 있다.
 
-- `type`은 저장할 데이터 타입이다.
-- `Allocator`는 메모리 할당자이다.
+- Index
+- Iterator
+- Range-based for loop (C++11) (가장 안전하다.)
 
-C++ 표준 라이브러리 벡터 클래스는 시퀀스 컨테이너에 대한 클래스 템플릿입니다. 벡터는 지정된 형식의 요소를 선형 배열에 저장하고 모든 요소에 대한 빠른 임의 액세스를 허용합니다.
+*실제로 이터레이터와 range-based for loop은 비슷하게 돌아감*
 
-- 언어 및 라이브러리
-  - std::vector: C++의 표준 라이브러리(STL)에 속하는 컨테이너 클래스입니다.
-  - List<T>: C#의 표준 라이브러리인 .NET Framework 또는 .NET Core에 속하는 제네릭 컬렉션 클래스입니다.
-- 메모리 관리
-  - std::vector: 요소를 포인터 배열로 저장하며, 동적으로 크기가 조정될 때 메모리를 다시 할당합니다.
-  - List<T>: 요소를 노드로 연결된 방식으로 저장하며, 동적으로 크기가 조정될 때 요소를 복사하여 새로운 배열을 할당합니다.
-- 메모리 구조
-  - std::vector: 요소는 연속적인 메모리 블록에 저장됩니다.
-  - List<T>: 요소는 각각의 노드에 저장되며, 노드들은 메모리에서 서로 불연속적으로 할당됩니다.
-- 성능
-  - std::vector: 요소의 추가나 삭제가 배열의 끝에서 빠르게 수행됩니다. 요소의 삽입 및 삭제가 중간에서 발생할 경우 다수의 요소를 이동해야 할 수 있습니다.
-  - List<T>: 요소의 삽입 및 삭제가 배열의 중간에서 빠르게 수행됩니다. 그러나 인덱스로 직접 접근할 때에는 선형적인 시간이 소요됩니다.
-- 공통점
-  - 동적 크기 조정: 두 클래스 모두 요소의 동적 크기 조정을 지원하여 요소의 추가 및 삭제가 자유롭게 가능합니다.
-  - 접근자 및 반복자: 두 클래스 모두 요소에 접근할 수 있는 방법을 제공하며, 반복자를 통해 요소를 순회할 수 있습니다.
-  - 제네릭: 두 클래스 모두 제네릭(Generic)으로 구현되어 다양한 데이터 유형을 저장할 수 있습니다.
-  - 원소 삽입 및 삭제: 배열의 중간에서의 원소 삽입 및 삭제가 가능합니다. 하지만 std::vector는 배열의 끝에서의 삽입 및 삭제가 더 효율적입니다.
-  - 메모리 할당 및 해제: 요소가 추가되거나 삭제될 때 내부적으로 메모리 할당 및 해제 작업이 수행됩니다
+실제 어셈블리나 동작 속도를 비교해보면 크게 의미는 없지만, 가독성과 안전성을 고려하면 Range-based for loop을 사용하는 것이 좋다.
 
-벡터를 사용하면 시퀀스 끝에서 상수 시간 삽입 및 삭제할 수 있습니다. 벡터 중간에 요소를 삽입하거나 삭제하려면 선형 시간이 필요합니다.  (배열기반이기 때문)
+하지만, Index를 사용하는 때가 있다. 실제 벡터 내부의 값을 변경(size)할 때는 Index를 사용하는 것이 좋다. 이는 위에서 설명한 벡터의 특성 때문인데, 벡터는 emplace_back()을 통해 객체를 추가할 때, capacity가 꽉 찼을 때 새로운 메모리를 할당하고 기존 데이터를 복사하기 때문에, iterator를 사용할 때는 문제가 발생할 수 있다. 의미없는 메모리를 순회하게 된다.
 
-자세한 내용은 동적배열에 관한 문서 참고
-
-벡터는 재할당 과정에서 상당한 자원이 소모된다. 따라서 reserve 메서드를 통해 원하는 크기만큼 새로운 공간을 재할당할 수도 있다.
-
-#### push_back
-
+- 이미 move나 copy를 통해 새로운 메모리를 할당했지만, iterator는 다른 곳을 가리키고 있기 때문에 문제가 발생한다.
+ 
 ```c++
 #include <vector>
 #include <iostream>
 
 int main()
 {
-    std::vector<int> v1;
+    std::vector<int> v = { 1, 2, 3, 4, 5 };
 
-    v1.push_back(10);
-    v1.push_back(20);
-
-    std::cout << "The first element is " << v1[0] << std::endl;
-    std::cout << "The second element is " << v1[1] << std::endl;
-}
-```
-
-벡터의 끝에 요소를 추가합니다.
-
-#### pop_back
-
-```c++
-#include <vector>
-#include <iostream>
-
-int main()
-{
-    std::vector<int> v1;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    std::cout << "The first element is " << v1[0] << std::endl;
-    std::cout << "The second element is " << v1[1] << std::endl;
-
-    v1.pop_back();
-
-    std::cout << "The first element is " << v1[0] << std::endl;
-}
-```
-
-벡터의 끝에서 요소를 제거합니다.
-
-#### insert
-
-```c++
-#include <vector>
-#include <iostream>
-
-int main()
-{
-    std::vector<int> v1;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    std::cout << "The first element is " << v1[0] << std::endl;
-    std::cout << "The second element is " << v1[1] << std::endl;
-
-    v1.insert(v1.begin() + 1, 15);
-
-    std::cout << "The first element is " << v1[0] << std::endl;
-    std::cout << "The second element is " << v1[1] << std::endl;
-    std::cout << "The third element is " << v1[2] << std::endl;
-}
-```
-
-벡터의 지정된 위치에 요소를 삽입합니다.
-
-#### at
-
-벡터의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.
-
-```c++
-// vector_at.cpp
-// compile with: /EHsc
-#include <vector>
-#include <iostream>
-
-int main( )
-{
-   using namespace std;
-   vector <int> v1;
-
-   v1.push_back( 10 );
-   v1.push_back( 20 );
-
-   const int &i = v1.at( 0 );
-   int &j = v1.at( 1 );
-   cout << "The first element is " << i << endl;
-   cout << "The second element is " << j << endl;
-}
-```
-
-주소값을 반환하기 때문에 const가 아니라면 값을 변경할 수 있다.(원본의 값을 변경)
-
-#### back
-
-벡터의 마지막 요소에 대한 참조를 반환합니다.
-
-```c++
-#include <vector>
-#include <iostream>
-
-int main() {
-   using namespace std;
-   vector <int> v1;
-
-   v1.push_back( 10 );
-   v1.push_back( 11 );
-
-   int& i = v1.back( );
-   const int& ii = v1.front( );
-
-   cout << "The last integer of v1 is " << i << endl;
-   i--;
-   cout << "The next-to-last integer of v1 is "<< ii << endl;
-}
-```
-
-#### begin
-
-벡터의 첫 번째 요소에 대한 임의 액세스 반복기를 반환합니다.
-
-```c++
-const_iterator begin() const;
-
-iterator begin();
-```
-
-```c++
-#include <vector>
-#include <iostream>
-
-int main()
-{
-    using namespace std;
-    vector<int> c1;
-    vector<int>::iterator c1_Iter;
-    vector<int>::const_iterator c1_cIter;
-
-    c1.push_back(1);
-    c1.push_back(2);
-
-    cout << "The vector c1 contains elements:";
-    c1_Iter = c1.begin();
-    for (; c1_Iter != c1.end(); c1_Iter++)
+    // Index
+    for (int i = 0; i < v.size(); ++i)
     {
-        cout << " " << *c1_Iter;
+        std::cout << v[i] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "The vector c1 now contains elements:";
-    c1_Iter = c1.begin();
-    *c1_Iter = 20;
-    for (; c1_Iter != c1.end(); c1_Iter++)
+    // Iterator
+    for (std::vector<int>::iterator it = v.begin(); it != v.end(); ++it)
     {
-        cout << " " << *c1_Iter;
+        std::cout << *it << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
-    // The following line would be an error because iterator is const
-    // *c1_cIter = 200;
+    // Range-based for loop
+    for (const int & i : v)
+    {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
 }
 ```
 
-#### capacity
+#### erase and remove
 
-가용 공간의 길이를 반환합니다.
+vertor는 remove에서 O(n)의 time complexity를 가지게 된다.
+
+만약 단순하게 벡터를 반복문으로 순회하면서 어떤 요소의 값을 지우게 된다면 이는 요소의 값을 지우고 매번 공간을 재할당 + copy가 발생하는 문제점이 있다.
+
+이를 해결하기 위해 remove와 erase를 사용한다. 실제 동작은 Shifting으로 이루어진다.
+
+```c++
+// vecotr 0 1 0 1 0 1 0 에서 0을 지우는 코드
+std::vector<int> v { 0, 1, 0, 1, 0, 1, 0 };
+
+v.erase(std::remove(v.begin(), v.end(), 0), v.end());
+```
+
+remove의 실행과정은 itr(이터레이터)가 begin과 end를 가리키고 있다. 처음 itr가 첫번째 요소를 조건에 비교한다. 만약 0이라면 하나의 포인터를 더 만들어서 다음 요소를 가리키게 한다. 다음 포인터가 만약 0이 아니라면 처음 포인터의 위치로 값을 복사(Shift)한다. 이 과정이 끝나면 두 포인터는 하나씩 뒤로 밀리게 된다.
+
+다시 2번 포인터는 값을 비교하고 만약 ㅇ이라면 그냥 넘어가고 0이 아니라면 1번 포인터로 move한다. move가 발생하면 두 개의 포인터는 뒤로 한칸씩 shift된다. 이 과정을 반복하다 2번 포인터가 last포인터를 만나면 종료된다.
+
+remove는 해당 작업의 1번 포인터의 위치를 반환하게 되고 erase는 그 위치부터 끝까지 지우게 된다.
+
+```c++
+0 1 0 1 0 1 0
+-> remove
+1 1 1 0 1 0 0
+-> erase
+1 1 1
+```
+
+### vector, array Algorithm
+
+- Algo를 include하면 다양한 알고리즘을 사용할 수 있다.
+
+#### sorting
+
+C++공식 문서에서 벡터의 정렬은 NlogN의 시간복잡도를 가진다고 한다.
+
+이는 `introsort`를 사용하기 때문이다. introsort는 quicksort와 heapsort를 섞어놓은 것이다. 처음에는 quicksort를 사용하고, 퀵소트의 깊이가 logN을 넘어가면 heapsort를 사용한다. 그러다 element의 개수가 작아지면 insertion sort를 사용한다.
+
+*라이브러리에 따라 다르다.*
+
+- stable_sort
+  - stable_sort는 같은 값에 대해서는 순서를 유지한다. 쉽게 말해서 조건대로 정렬을 하더라도 같은 값에 대해서는 원래의 순서를 유지한다.
+- partial_sort
+  - partial_sort는 정렬된 상태에서 k개의 작은 값만 정렬한다. 기존 정렬보다 더 빠르게 동작한다.
+- nth_element
+  - nth_element는 n번째 작은 값을 찾는다. 정렬된 상태가 아니라도 빠르게 찾을 수 있다. 찾는 것 뿐만 아니라 벡터의 구성도 달라진다. 왼쪽으로는 n보다 작은 값, 오른쪽으로는 n보다 큰 값이 위치하게 된다. (정렬 x)
+
+#### min, max
+
+- min_element
+  - 최소값을 찾는다.
+- max_element
+  - 최대값을 찾는다.
+- minmax_element
+  - 최소값과 최대값을 찾는다. 한번의 순회로 찾을 수 있다.
+
+#### find
+
+```c++
+#include <vector>
+#include <algorithm>
+
+int main()
+{
+    std::vector<int> v = { 1, 2, 3, 4, 5 };
+
+    auto it = std::find(v.begin(), v.end(), 3);
+
+    if (it != v.end())
+    {
+        std::cout << "Found: " << *it << std::endl;
+    }
+    else
+    {
+        std::cout << "Not Found" << std::endl;
+    }
+}
+```
+
+찾았다면 해당 위치의 이터레이터를 반환하고, 못찾았다면 end()를 반환한다.
+
+또한 binary_search를 사용하여 이진탐색을 할 수 있다.
+
+#### reduce, accumulate
+
+```c++
+#include <vector>
+#include <numeric>
+
+int main()
+{
+    std::vector<int> v = { 1, 2, 3, 4, 5 };
+
+    int sum = std::accumulate(v.begin(), v.end(), 0);
+
+    std::cout << "Sum: " << sum << std::endl;
+
+    int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
+}
+```
+
+accumulate는 벡터의 모든 요소를 더하는 함수이다. reduce는 parallel하게 동작한다. (더 빠름)
+
+### 다차원 배열
+
+원래 C 스타일과 같이 더블포인터나 스택에 할당되게 `[][]`을 사용하지 않고 벡터와 어레이를 사용하여 다차원 배열을 만들 수 있다.
 
 ```c++
 #include <vector>
 #include <iostream>
 
-int main( )
+int main()
 {
-   using namespace std;
-   vector <int> v1;
-
-   v1.push_back( 1 );
-   cout << "The length of storage allocated is "
-        << v1.capacity( ) << "." << endl;
-
-   v1.push_back( 2 );
-   cout << "The length of storage allocated is now "
-        << v1.capacity( ) << "." << endl;
+    std::array<std::array<int, 3>, 3> fixedMatrix; // 사이즈가 작다면..
+    std::vector<std::vector<int>> dynamicMatrix(3, std::vector<int>(3)); // 사이즈가 크다면 대부분
 }
 ```
 
-2배씩 늘어난다. (동적 배열의 기본)
+but,, 실제로 접근이 자주 복잡하게 일어난다면 one dimensional array로 변환하여 사용하는 것이 좋다. 이는 matrix클래스를 만들어서 내부에서 오퍼레이터를 오버로딩하여 사용하는 것이다. (row와 col을 인자로 받아서 계산)
 
-- 1 2 4 8 16 ...
+또한 다차원 배열은 cache를 생각하여 사용해야 한다. (row-major, column-major) CacheLine을 생각하여 사용해야 한다.
 
-#### clear
+### deque
 
-배열을 비운다.
+double-ended queue의 약자로, vector와 비슷하지만 양쪽 끝에서 삽입과 삭제가 가능하다. vector, array와 마찬가지로 Random Access가 가능하다.
+
+- 두번의 포인터 디레퍼런스가 필요하다.
+- vector는 copy와 재할당이 있지만, deque는 그렇지 않다. 새로운 공간을 새로 할당하기에 복사가 필요하지 않다.
+- 연속되다가 끊어지기에 cache miss가 발생할 수 있다.
+
+### span
+
+C++20에서 추가된 span은 다른 컨테이너의 일부분을 가리키는 포인터와 길이의 쌍이다. span은 포인터와 길이를 가지고 있기 때문에 다른 컨테이너의 일부분을 가리킬 수 있다.
 
 ```c++
-// vector_clear.cpp
-// compile with: /EHsc
+#include <span>
 #include <vector>
 #include <iostream>
 
-int main( )
+int main()
 {
-   using namespace std;
-   vector <int> v1;
+    std::vector<int> v = { 1, 2, 3, 4, 5 };
 
-   v1.push_back( 10 );
-   v1.push_back( 20 );
-   v1.push_back( 30 );
+    std::span<int> s(v);
 
-   cout << "The size of v1 is " << v1.size( ) << endl;
-   v1.clear( );
-   cout << "The size of v1 after clearing is " << v1.size( ) << endl;
+    for (const auto& it : s)
+    {
+        std::cout << it << " ";
+    }
+    std::cout << std::endl;
 }
 ```
+
+이를 통해 연속된 배열의 형태를 가지는 컨테이너를 다룰 때 유용하다. 함수로 사용해도 시작점과 길이만 받기 때문에 메모리를 복사하지 않아도 된다. 마치 인터페이스처럼 사용할 수 있다.
+
+- 주의사항
+  - span으로 등록하고 나서 원본이 사라지면 문제가 발생할 수 있다. (주의)
+  - 대부분 할당하고 벡터에 push할 때, 재할당이 일어나면서 span이 가리키는 값이 쓰레기로 변해버린다. (마이그레이션으로 인한 문제)
+
+또한 static으로 사용하여 좀 더 효율적인 사용이 가능하다. `std::span<int, 5> s(v);`
 
 ### list
 
@@ -857,6 +712,14 @@ int main( )
 C++ 표준 라이브러리 목록 클래스는 해당 요소를 선형 배열로 기본 시퀀스 내의 모든 위치에서 효율적인 삽입 및 삭제를 허용하는 시퀀스 컨테이너의 클래스 템플릿입니다. 시퀀스는 각각 일부 형식 Type의 멤버를 포함하는 양방향 연결된 요소 목록으로 저장됩니다.
 
 `C#`의 `LinkedList`와 동일하다.
+
+*but 실제로는 잘 사용하지 않는다.*
+
+#### 추가 중요한 부분>
+
+- random access가 불가능하다.
+  - 따라서 std::sort를 사용할 수 없다.
+  - 자체의 sort를 사용해야 한다.
 
 차이점
 
@@ -973,6 +836,162 @@ std::list는 연결리스트에 기반을 두는데, 덕분에 어디에서든 �
 요소의 삽입/삭제: 어디든지 상수 시간 O(1)
 요소의 탐색: O(N)
 
+### std::forward_list
+
+list와 동일하지만, 단방향으로만 이동이 가능하다. 따라서 공간을 절약할 수 있다. (back 메서드 자체가 없다.)
+
+### vector vs list
+
+대부분의 경우에 vector를 사용하는 것이 좋다. list는 삽입, 삭제가 빠르지만, 탐색이 느리다. vector는 탐색이 빠르지만, 삽입, 삭제가 느리다.
+
+대부분 vector를 사용하는 이유는 find의 구조상 vector가 더 빠르기 때문이다. (cache hit) 또한 메모리를 연속적으로 사용하기 때문에 메모리를 더 효율적으로 사용할 수 있다. 똑같은 O(N)이지만 포인터 디레퍼런싱, 캐시 라인 등의 이유
+
+++ 병렬처리 때문에도 더욱
+
+### stack, queue
+
+- stack은 LIFO(Last In First Out)의 구조를 가지고 있다.
+- queue는 FIFO(First In First Out)의 구조를 가지고 있다.
+
+내부에서 stack은 vector or queue, queue는 deque를 사용한다.
+
+이를 그대로 사용하기보다, implement로 circle queue, circular buffer를 사용하는 것이 더욱 효율적이다. 내부적으로도 vector를 사용하면서 resver를 사용하여 재할당을 줄이는 것이 좋다.
+
+### priority_queue
+
+우선순위 큐는 가장 큰 원소가 항상 맨 앞에 위치하도록 유지하는 큐이다. 이는 힙(heap)을 사용하여 구현된다. 기본 컨테이너는 vector이다.
+
+- 특징
+  - insert, pop은 O(logN)의 시간복잡도를 가진다.
+  - max값을 찾는 것은 O(1)의 시간복잡도를 가진다.
+
+추상적으로 생각하면 트리형태로 그려진다 (대부분 logN이라면 트리형태로 그려진다) 
+
+### heap
+
+힙선언은 다음과 같다.
+
+```c++
+void do_something(size_t size)
+{
+    // Declare an array of doubles to be allocated on the heap
+    double* numbers = new double[size]{ 0 };
+
+    // Assign a new value to the first element
+    numbers[0] = 1;
+
+    // Assign a value to each subsequent element
+    // (numbers[1] is the second element in the array.)
+    for (size_t i = 1; i < size; i++)
+    {
+        numbers[i] = numbers[i - 1] * 1.1;
+    }
+
+    // Access each element with subscript operator
+    for (size_t i = 0; i < size; i++)
+    {
+        std::cout << numbers[i] << " ";
+    }
+
+    // Access each element with pointer arithmetic
+    // Use a copy of the pointer for iterating
+    double* p = numbers;
+
+    for (size_t i = 0; i < size; i++)
+    {
+        // Dereference the pointer, then increment it
+        std::cout << *p++ << " ";
+    }
+
+    // Alternate method:
+    // Reset p to numbers[0]:
+    p = numbers;
+
+    // Use address of pointer to compute bounds.
+    // The compiler computes size as the number
+    // of elements * (bytes per element).
+    while (p < (numbers + size))
+    {
+        // Dereference the pointer, then increment it
+        std::cout << *p++ << " ";
+    }
+
+    delete[] numbers; // don't forget to do this!
+
+}
+int main()
+{
+    do_something(108);
+}
+```
+
+스택에 할당하기에는 너무 크거나 컴파일 시간에 크기를 알 수 없는 배열이 필요할 수 있습니다.
+
+연산자는 첫 번째 요소에 대한 포인터를 반환합니다. (포인터로 배열접근, *p++)
+
+제대로 사용하려면 다음을 보장해야 한다. (사용자가)
+
+- 항상 원래 포인터 주소의 복사본을 유지하므로 배열이 더 이상 필요하지 않을 때 메모리를 삭제할 수 있습니다.
+- 배열 범위를 지나 포인터 주소를 증가하거나 감소하지 않습니다.
+
+코드를 보면 배열로 순회하는 법, 포인터로 사이즈만큼 반복하여 순회하는 법, 포인터로 실제 메모리 크기만큼 반복하는 법을 알 수 있다.
+
+규칙에 나와 있듯이 3가지 방법다 배열의 범위를 지날 수 없는 기저사례들로 반복하고, 원본 포인터를 유지하여 마지막에 delete[]로 메모리를 해제해야 한다.
+
+vector나 deque과 같이 연속적인 메모리를 사용하여 구현
+
+- make_heap
+  - 배열을 힙으로 만든다.
+
+### Set
+
+c++에선 set을 red-black tree로 구현한다. (균형트리) 이진트리의 일종으로, 노드의 왼쪽 자식은 부모보다 작고, 오른쪽 자식은 부모보다 크다. BST의 특성을 가지고 있다.
+
+따라서 find의 경우 O(logN)의 시간복잡도를 가진다.
+
+삽입이나 삭제의 경우 O(logN)의 시간복잡도를 가진다. 이는 트리의 균형을 맞추기 위해 회전을 하기 때문이다.
+
+- set은 중복을 허용하지 않는다.
+- 내부적으로 항상 정렬된 상태를 유지한다.
+
+#### custom compare
+
+매우 유용한 기능으로 set을 선언할 때, 사용자 정의 비교함수를 사용할 수 있다.
+
+```c++
+#include <set>
+#include <iostream>
+
+struct Compare
+{
+    bool operator()(const int& a, const int& b) const
+    {
+        return a > b;
+    }
+};
+
+int main()
+{
+    std::set<int, Compare> s;
+
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+
+    for (const auto& it : s)
+    {
+        std::cout << it << " ";
+    }
+    std::cout << std::endl;
+}
+```
+
+이를 사용자 정의 클래스에도 쉽게 정의할 수 있다.*필수적으로 필요하다.*
+
+### std::multiset
+
+set과 동일하지만 중복을 허용한다.
+
 ### map
 
 - [공식 문서](https://learn.microsoft.com/ko-kr/cpp/standard-library/map-class?view=msvc-170)
@@ -1078,6 +1097,93 @@ int main( )
 }
 ```
 
+#### 정리
+
+Set과 비슷하지만, key와 value를 가지고 있다. key는 중복이 불가능하다. (중복을 허용하는 multimap도 있다.)
+
+- square bracket
+  - key를 통해 value에 접근할 수 있다.
+  - but, 신중하게 사용해야 한다. 없는 key에 접근하면 새로운 key를 만들어버린다. (default 생성자로)
+- set과 같은 자료형을 가지기에 find, insert, erase를 사용할 수 있다.
+
+### unordered_set
+
+set은 내부적으로 트리 구조를 가지고 있어서 O(logN)의 시간복잡도를 가진다. unordered_set은 해시 테이블을 사용하여 O(1)의 시간복잡도를 가진다.
+
+#### hash
+
+해시 함수는 임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수이다. 이때, 해시 함수는 동일한 입력에 대해 항상 동일한 출력을 반환해야 한다.
+
+해시 함수는 다음과 같은 특징을 가진다.
+
+- 동일한 입력에 대해 항상 동일한 출력을 반환한다.
+- 출력은 고정된 길이이다.
+- 서로 다른 입력에 대해 다른 출력을 반환한다.
+- 해시 함수는 빠르게 계산할 수 있어야 한다.
+- 해시 충돌을 최소화해야 한다.
+- 해시 함수는 보안적으로 안전해야 한다.
+- ...
+
+unordered_set은 해시 테이블을 사용하여 구현되어 있기 때문에 삽입, 삭제, 탐색이 상수 시간 O(1)에 수행된다.
+
+해쉬 충돌은 체이닝으로 해결하고, 버킷또한 동적으로 할당된다.
+
+할당되는 값이 많아지면 버킷이 동적으로 변경되고, rehashing이 일어난다. rehashing은 O(N)의 시간복잡도를 가진다.
+
+vector와 똑같이 미리 메모리를 할당해놓는 것이 좋다. rehashing을 줄이기 위해 reserve를 사용한다.
+
+#### 사용자 정의 클래스
+
+사용자 정의 클래스를 unordered_set에 넣으려면 hash와 equal_to를 정의해야 한다.
+
+```c++
+#include <iostream>
+#include <unordered_set>
+
+class Point
+{
+public:
+    Point(int x, int y) : x(x), y(y) {}
+
+    int x;
+    int y;
+};
+
+struct PointHash
+{
+    std::size_t operator()(const Point& p) const
+    {
+        return std::hash<int>()(p.x) ^ std::hash<int>()(p.y);
+    }
+};
+
+struct PointEqual
+{
+    bool operator()(const Point& p1, const Point& p2) const
+    {
+        return p1.x == p2.x && p1.y == p2.y;
+    }
+};
+
+int main()
+{
+    std::unordered_set<Point, PointHash, PointEqual> points;
+
+    points.insert(Point(1, 1));
+    points.insert(Point(2, 2));
+    points.insert(Point(3, 3));
+
+    for (const auto& it : points)
+    {
+        std::cout << it.x << ", " << it.y << std::endl;
+    }
+
+    return 0;
+}
+```
+
+std안에 넣어서 사용할 수도 있다.
+
 ### unordered_map
 
 std::unordered_map은 기존 std::map의 문제를 해결하기 위해 나온 컨테이너로 C++ 11부터 적용된다.
@@ -1117,6 +1223,13 @@ std::unordered_map에서 사용되는 자료구조는 해시맵 또는 해시테
 해시 함수는 키 값을 정수로 변환하는 역할을 한다. 동일한 키 값이 주어지면 동일한 정수로 변환해 준다. 하지만 정수 값을 통해 키 값을 구하는 것은 불가능하다.
 
 해시 함수를 이용하면 함수 한 번으로 데이터가 들어갈 인덱스를 구할 수 있어 탐색이 훨씬 빠르다.
+
+#### 특징
+
+- unordered_set과 마찬가지로 해시 테이블을 사용하여 구현되어 있어 삽입, 삭제, 탐색이 상수 시간 O(1)에 수행된다.
+- 키와 값의 쌍을 저장하는 연관 컨테이너이다.
+- 키는 중복될 수 없다.
+- 
 
 ### 정리
 
@@ -1197,3 +1310,17 @@ std::unordered_map에서 사용되는 자료구조는 해시맵 또는 해시테
 3. 키에 대한 범위 검색이 불가능합니다.
 
 따라서 `std::map`은 정렬된 키가 필요하거나 범위 검색이 필요한 경우에 유용하며, `std::unordered_map`은 검색 및 삽입 연산이 빈번하게 발생하고 정렬된 키가 필요하지 않은 경우에 유용합니다. 선택하는 것은 사용하고자 하는 요구 사항에 따라 다르며, 각각의 자료구조는 자신만의 장단점을 가지고 있습니다.
+
+### 추가 정리
+
+- set, map은 내부적으로 레드블랙트리로 구현되어 있다.
+  - 따라서 삽입, 삭제, 탐색이 O(logN)의 시간복잡도를 가진다.
+  - 또한 사용을 위해 비교함수를 정의해야 한다.
+  - 비교함수로 인해 정렬된 상태를 유지한다.
+- unordered_set, unordered_map은 해시테이블로 구현되어 있다.
+  - 따라서 삽입, 삭제, 탐색이 O(1)의 시간복잡도를 가진다.
+  - hash와 equal_to를 정의해야 한다.
+  - 정렬된 상태를 유지하지 않는다.
+  - rehashing이 일어날 수 있다.
+    - rehashing은 O(N)의 시간복잡도를 가진다.
+    - reserve를 사용하여 rehashing을 줄일 수 있다.
