@@ -9,6 +9,7 @@
   - 휴리스틱 추정값을 통해 알고리즘을 개선 (값에 따라 속도가 결정)
 
 [가장 이해가 잘 된 블로그 글](http://www.gisdeveloper.co.kr/?p=3897)
+[가장 잘 이해가 되는 영상](https://www.youtube.com/watch?v=-L-WgKMFuhE)
 
 ## 중요 포인트
 

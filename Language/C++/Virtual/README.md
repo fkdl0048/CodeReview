@@ -125,6 +125,42 @@ virtual 키워드를 붙임으로서 실제 메모리에는 포인터 변수(8 b
 
 **이 때문에 base클래스의 소멸자는 반드시 가상 소멸자로 선언해야 한다. 이는 상속받은 클래스의 소멸자가 호출될 수 있도록 하기 위함이다.** 만약 선언되어 있지 않다면 base클래스의 소멸자만 호출되고, 상속받은 클래스의 소멸자는 호출되지 않는다.
 
+### 가상함수 테이블의 동작 및 역할
+
+가상함수 테이블은 동적으로 함수를 바인딩하기 위함도 있지만, 다이나믹 캐스팅 당시에 해당 객체의 타입을 확인하기 위한 역할도 한다. 런타임 타입 정보(RTTI)를 사용하여 객체의 실제 타입을 확인한다. RTTI는 vtable을 통해 제공됩니다. 즉, vtable은 객체의 타입 정보를 포함하고 있으며, 이를 통해 다이나믹 캐스팅은 객체의 실제 타입을 확인할 수 있습니다.
+
+```cpp
+#include <iostream>
+#include <typeinfo>
+
+class Base {
+public:
+    virtual ~Base() = default; // 가상 소멸자를 통해 vtable 생성
+};
+
+class Derived : public Base {
+public:
+    void show() { std::cout << "Derived class\n"; }
+};
+
+int main() {
+    Base* b = new Derived();
+    
+    // 다이나믹 캐스팅을 통해 실제 타입을 확인하고 변환
+    Derived* d = dynamic_cast<Derived*>(b);
+    if (d) {
+        d->show(); // "Derived class" 출력
+    } else {
+        std::cout << "Casting failed\n";
+    }
+
+    delete b;
+    return 0;
+}
+```
+
+위 예제에서 `dynamic_cast`를 통해 `Base` 클래스의 포인터를 `Derived` 클래스의 포인터로 변환하고, 이를 통해 실제 타입을 확인하고 출력한다.
+
 ## 순수 가상함수(Pure Virtual Function)
 
 ```cpp

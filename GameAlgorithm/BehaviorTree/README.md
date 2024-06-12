@@ -57,3 +57,144 @@ FSM(finite state machine)은 State중심으로 결정했다면, BT는 행동중�
   - 기타
     - 행동 트리의 탐색 순서가 행동에 영향을 미친다. (우선순위-> 왼쪽에서 오른쪽으로 탐색)
     - Selector의 자식 노드가 많을수록 AI의 의사결정이 지연될 수 있다.
+
+## C#으로 구현
+
+```csharp
+using ETC;
+
+namespace Interface
+{
+    public interface IBTNode
+    {
+        public BTNodeState Evaluate();
+    }
+}
+```
+
+```csharp
+using System;
+using ETC;
+using Interface;
+
+namespace BT
+{
+    public class BTActionNode : IBTNode
+    {
+        readonly Func<BTNodeState> _action;
+        
+        public BTActionNode(Func<BTNodeState> action)
+        {
+            _action = action;
+        }
+        
+        public BTNodeState Evaluate() => _action?.Invoke() ?? BTNodeState.Failure;
+    }
+}
+```
+
+```csharp
+using System.Collections.Generic;
+using ETC;
+using Interface;
+
+namespace BT
+{
+    public class BTSelectorNode : IBTNode
+    {
+        private readonly List<IBTNode> _childNode;
+        
+        public BTSelectorNode(List<IBTNode> childNode)
+        {
+            _childNode = childNode;
+        }
+        
+        public BTNodeState Evaluate()
+        {
+            if (_childNode == null || _childNode.Count == 0)
+            {
+                return BTNodeState.Failure;
+            }
+            
+            foreach (var node in _childNode)
+            {
+                switch (node.Evaluate())
+                {
+                    case BTNodeState.Running:
+                        return BTNodeState.Running;
+                    case BTNodeState.Success:
+                        return BTNodeState.Success;
+                }
+            }
+            
+            return BTNodeState.Failure;
+        }
+    }
+}
+```
+
+```csharp
+using System.Collections.Generic;
+using ETC;
+using Interface;
+
+namespace BT
+{
+    public class SequenceNode : IBTNode
+    {
+        private readonly List<IBTNode> _childNode;
+        
+        public SequenceNode(List<IBTNode> childNode)
+        {
+            _childNode = childNode;
+        }
+        
+        public BTNodeState Evaluate()
+        {
+            if (_childNode == null || _childNode.Count == 0)
+            {
+                return BTNodeState.Failure;
+            }
+            
+            foreach (var node in _childNode)
+            {
+                switch (node.Evaluate())
+                {
+                    case BTNodeState.Running:
+                        return BTNodeState.Running;
+                    case BTNodeState.Success:
+                        continue;
+                    case BTNodeState.Failure:
+                        return BTNodeState.Failure;
+                }
+            }
+            
+            return BTNodeState.Success;
+        }
+    }
+}
+```
+
+
+```csharp
+using Interface;
+using UnityEngine;
+
+namespace BT
+{
+    public class BTRunner
+    {
+        private IBTNode _rootNode;
+        
+        public BTRunner(IBTNode rootNode)
+        {
+            _rootNode = rootNode;
+        }
+        
+        public void Execute()
+        {
+            _rootNode.Evaluate();
+        }
+    }
+}
+```

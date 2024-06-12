@@ -14,6 +14,7 @@
 - [GameDesign](GameDesign/README.md)
 - [GameEngine](GameEngine/README.md)
 - [GameMath](GameMath/README.md)
+- [GamePhysics](GamePhysics/README.md)
 - [Graphics](Graphics/README.md)
 - [Language](Language/README.md)
 - [OOP](OOP/README.md)
