@@ -254,3 +254,78 @@ namespace Sort
     }
 }
 ```
+
+## 좌표정렬 (STL 정렬 활용 예시)
+
+- vector를 사용한 정렬
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int p1, p2;
+    vector<pair<int, int>> s;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> p1 >> p2;
+        s.push_back(make_pair(p1, p2));
+    }
+
+    sort(s.begin(), s.end());
+
+    for(auto p : s)
+    {
+        cout << p.first << " " << p.second << '\n';
+    }
+}
+```
+
+기본적으로 정렬은 위와 같이 수행되지만, 추가적인 조건을 설정하기 위해선 bool을 반환하는 compare함수를 인자로 넣어주면 된다.
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool compare(pair<int, int> a, pair<int, int> b){
+    if (a.second == b.second)
+        return a.first < b.first;
+    else
+        return a.second < b.second;
+}
+
+int main()
+{
+    int n;
+    int p1, p2;
+    vector<pair<int, int>> v;
+
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> p1 >> p2;
+        v.push_back(make_pair(p1, p2));
+    }
+
+    sort(v.begin(), v.end(), compare);
+
+    for (int i = 0; i < n; i++)
+        cout << v[i].first << ' ' << v[i].second << '\n';
+}
+```
+
+이처럼 정렬에 특수한 조건을 달 수 있디. 람다형식으로도 사용 가능.
+
+```cpp
+sort(v.begin(), v.end(), [](const pair<int, int>& a, const pair<int, int>& b) {
+    if (a.second == b.second)
+        return a.first < b.first;
+    else
+        return a.second < b.second;
+});
+```
