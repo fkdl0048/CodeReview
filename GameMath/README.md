@@ -6,3 +6,4 @@
 - [Matrix](./Matrix/README.md)
 - [Quaternion](./Quaternion/README.md)
 - [CoordinateSystem](./CoordinateSystem/README.md)
+- [BayesianProbability](./BayesianProbability/README.md)
