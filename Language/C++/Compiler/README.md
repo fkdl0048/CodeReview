@@ -153,7 +153,7 @@ std::cout << "Hello, world!" << std::endl;
 
 ## 실제 어셈블리 과정
 
-- [C++ 어셈블리어](../Assembler/README.md)
+- [C++ 어셈블리어](https://github.com/fkdl0048/CodeReview/blob/main/Language/C%2B%2B/Assembler/README.md)
 
 ## 참조
 
