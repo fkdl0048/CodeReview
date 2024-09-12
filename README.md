@@ -1,6 +1,8 @@
 # CodeReview  
 
-공부와 프로젝트 작업 중 기록하고 싶은 내용, 구체화하고 싶은 코드를 리뷰하는 레포입니다.
+- [게임 개발자 정보 모음집 [CodeReview]](https://fkdl0048.github.io/daily/CodeReview_Promotion/)
+
+게임 개발자가 공부하며 정리한 내용을 리뷰하는 저장소입니다. 기여나 수정사항은 언제든지 환영합니다. 도움이 되셨다면 Star을 눌러주시거나 기여 또는 수정사항을 남겨주세요.
 
 ## Index
 
