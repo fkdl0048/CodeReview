@@ -2,6 +2,8 @@
 
 *메모리 관련*
 
+- [실제 어셈블리 동작 과정](https://github.com/fkdl0048/CodeReview/issues/58)
+
 ![image](https://github.com/fkdl0048/CodeReview/assets/84510455/c716c73a-f9c2-431b-8638-ac6db1da3296)
 
 프로그램이 실행되려면 먼저 프로그램을 메모리에 로드해야 한다.
