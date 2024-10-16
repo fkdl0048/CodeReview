@@ -14,6 +14,82 @@ C++에서는 포인터와 레퍼런스를 사용할 수 있다. 포인터와 레
 - New: 할당과 동시에 초기화 가능, 객체를 생성할 때 사용, 객체 생성 시 생성자를 호출함 `new *cpp_style = new int[10]`
   - 오버로딩 가능
 
+### . vs ->
+
+C언어를 많이 다뤄봤다면 크게 헷갈리지 않지만, 포인터의 개념과 레퍼런스등의 개념을 배우게 되면서 조금 헷갈릴 수 있는 개념이다.
+
+`.`연산자는 **객체 자체를 통해 멤버에 접근할 때 사용한다.**
+
+```cpp
+struct Person {
+    std::string name;
+    int age;
+};
+
+int main() {
+    Person person;
+    person.name = "Alice";
+    person.age = 30;
+
+    std::cout << person.name << std::endl;
+    return 0;
+}
+```
+
+`->`연산자는 **객체에 대한 포인터를 통해 멤버에 접근할 때 사용한다.**
+
+```cpp
+struct Person {
+    std::string name;
+    int age;
+};
+
+int main() {
+    Person* personPtr = new Person;
+    personPtr->name = "Bob";
+    personPtr->age = 25;
+
+    std::cout << personPtr->name << std::endl;
+
+    delete personPtr;
+    return 0;
+}
+```
+
+차이점은 .은 객체의 실제 인스턴스를 통해 멤버에 접근한다는 것이고, 화살표는 객체의 포인터를 통해 멤버에 접근한다는 것이다.
+
+사실 ->를 사용하는 이유는 포인터를 역참조한 후 점 연산자를 사용하는 것과 같다.
+
+```cpp
+personPtr->name = "Bob";
+(*personPtr).name = "Bob";
+```
+
+추가로 레퍼런스의 경우엔 실제 객체와 같이 사용되므로 `.`연산자만 사용할 수 있다.
+
+```cpp
+struct Person {
+    std::string name;
+    int age;
+};
+
+int main() {
+    Person person;
+    Person& personRef = person;     // 레퍼런스
+    Person* personPtr = &person;    // 포인터
+
+    // 레퍼런스 사용 시
+    personRef.name = "Charlie";
+    personRef.age = 28;
+
+    // 포인터 사용 시
+    personPtr->name = "Dave";
+    personPtr->age = 35;
+
+    return 0;
+}
+```
+
 ## 레퍼런스
 
 실체가 있어야 하며 선언 즉시 할당되어야한다. 즉 NULL, nullptr로 할당 불가능하다.
