@@ -3,6 +3,7 @@
 C++에 관한 내용 정리
 
 - 정리에 활용하는 [cpp-sandbox](https://github.com/fkdl0048/cpp-sandbox)
+- 개념 이해에 도움이 되는 [Effective C++](https://github.com/fkdl0048/BookReview/issues/256)
 
 ## 목차
 
