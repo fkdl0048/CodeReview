@@ -9,3 +9,4 @@
 - [Gameover](./GameOverProject/README.md)
 - [Planeta](./PlanetaProject/README.md)
 - [AntCompany](./AntCompanyProject/README.md)
+- [merchants-journey](./MerchantsJourneyProject/README.md)
