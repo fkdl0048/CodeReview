@@ -8,3 +8,4 @@
 - [Unity-PlayFab](./UnityPlayFab/README.md)
 - [CoreSystem](./CoreSystem/README.md)
 - [CustomEditor](./CustomEditor/README.md)
+- [Unity DI Framework](./UnityDIFramework/README.md)
