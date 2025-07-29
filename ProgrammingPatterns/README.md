@@ -13,3 +13,4 @@
 - [NullObjectPattern](./NullObjectPattern/README.md)
 - [ObserverPattern](./ObserverPattern/README.md)
 - [StatePattern](./StatePattern/README.md)
+- [ServiceLocatorPattern](./ServiceLocatorPattern/README.md)
